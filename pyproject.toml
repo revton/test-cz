@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "test-cz"
+version = "2023.08"
+description = ""
+authors = ["Revton Braga <revtonbr@gmail.com>"]
+readme = "README.md"
+packages = [{include = "test_cz"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+commitizen = "^3.6.0"
+
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "pep440"
+version_provider = "poetry"
+major_version_zero = true
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
